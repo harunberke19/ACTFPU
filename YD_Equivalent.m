@@ -7,7 +7,7 @@ clc; clear; close all;
 % 1. USER INPUT (Enter your digits here)
 % ==========================================
 
-str_input = input('Enter digits abc (e.g. 019): ','s');
+str_input = input('Enter digits abc (e.g. 019): ','s'); %ON DOKUUUUZZ CORUUMMMMMM!! :DD :P CORUUUMMM NUMERO ONE CORUUMMM
 vals = str_input - '0';
 a = vals(1);
 b = vals(2);
