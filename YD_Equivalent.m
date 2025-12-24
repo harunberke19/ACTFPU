@@ -17,14 +17,14 @@ c = vals(3);
 
 
 % ==========================================
-% 2. DEFINING PARAMETERS [Source: 13, 14]
+% 2. DEFINING PARAMETERS 
 % ==========================================
-Sn_kVA = 20;               % Rated Power in kVA
-Sn = Sn_kVA * 1000;        % Rated Power in VA
-V1_Line_kV = 15.4;         % Primary Voltage in kV
-V1_Line = V1_Line_kV * 1000; % Primary Voltage in V
-uk_percent = 30;           % Short Circuit Voltage %
-i0_percent = 30;           % No-Load Current %
+Sn_kVA = 20;               
+Sn = Sn_kVA * 1000;        
+V1_Line_kV = 15.4;         
+V1_Line = V1_Line_kV * 1000; 
+uk_percent = 30;           
+i0_percent = 30;           
 
 % Convert percentages to decimals
 uk = uk_percent / 100;
@@ -33,9 +33,9 @@ i0 = i0_percent / 100;
 % ==========================================
 % 3. EFFICIENCY CALCULATION
 % ==========================================
-% Formula: 60 + (a+b+c) + (abc/10) [Source: 14]
+% Formula: 60 + (a+b+c) + (abc/10) 
 sum_digits = a + b + c;
-abc_val = a*100 + b*10 + c; % Interpret abc as a number (e.g. 046)
+abc_val = a*100 + b*10 + c; 
 eta_percent = 60 + sum_digits + (abc_val / 10);
 eta = eta_percent / 100;
 
@@ -130,8 +130,8 @@ I0_Phase = i0 * I1_Phase;
 Rc = (3 * V1_Phase^2) / P_fe;
 
 % Magnetizing Reactance Xm
-Iw = V1_Phase / Rc;          % Active current
-Im = sqrt(I0_Phase^2 - Iw^2); % Magnetizing current
+Iw = V1_Phase / Rc;          
+Im = sqrt(I0_Phase^2 - Iw^2); 
 Xm = V1_Phase / Im;
 
 fprintf('\n--- Shunt Branch ---\n');
